@@ -1,6 +1,6 @@
 export default function NavBar() {
   return (
-    <nav className="bg-slate-50 h-18 px-6 flex justify-between items-center">
+    <nav className="bg-slate-50 h-18 px-6 flex justify-between items-center sticky top-0 z-50  shadow">
       <div className="flex w-full justify-between items-center mr-16">
         {/* Logo */}
         <div className="text-xl font-bold ml-8">

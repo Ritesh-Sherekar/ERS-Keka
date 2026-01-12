@@ -16,10 +16,9 @@ function App() {
       <MainPage/>
       <LogoSlider/>
       <Awarded/>
+      <FeatureSlider/>
       <Products/>
       <CreateAccount/>
-      <FeatureSlider/>
-      
     </>
   )
 }
