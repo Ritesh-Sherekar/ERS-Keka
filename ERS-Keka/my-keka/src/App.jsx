@@ -8,6 +8,7 @@ import CreateAccount from "../Components/CreateAccount.jsx";
 import Awarded from "../Components/Awarded.jsx"
 import Products from "../Components/Products.jsx";
 import FeatureSlider from "../Components/FeatureSlider.jsx";
+import Industry from "../Components/Industry.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <FeatureSlider/>
       <Products/>
       <CreateAccount/>
+      <Industry/>
     </>
   )
 }
