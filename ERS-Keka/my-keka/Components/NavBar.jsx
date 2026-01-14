@@ -1,4 +1,9 @@
+import { useNavigate } from "react-router-dom";
+
+
 export default function NavBar() {
+    const navigate = useNavigate();
+ 
   return (
     <nav className="bg-slate-50 h-18 px-6 flex justify-between items-center sticky top-0 z-50  shadow">
       <div className="flex w-full justify-between items-center mr-16">
@@ -36,7 +41,7 @@ export default function NavBar() {
           <button className="px-4 py-2 rounded text-gray-700 border-0 hover:text-gray-600 cursor-pointer">
             Login
           </button>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-4xl hover:bg-blue-600">
+          <button onClick={() => navigate("/create-account")} className="bg-blue-500 text-white px-4 py-2 rounded-4xl hover:bg-blue-600">
             Get Free Trial
           </button>
         </div>
