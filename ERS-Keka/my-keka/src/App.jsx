@@ -12,6 +12,7 @@ import Products from "../Components/Products.jsx";
 import FeatureSlider from "../Components/FeatureSlider.jsx";
 import Industry from "../Components/Industry.jsx";
 import AppStructure from "../Components/AppStructure.jsx";
+import LoginPage from "../Components/LoginPage.jsx";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
 
         {/* CREATE ACCOUNT PAGE */}
         <Route path="/create-account" element={<CreateAccount />} />
+        <Route path="/login-page" element={<LoginPage/>} />
       </Routes>
     </BrowserRouter>
   );
