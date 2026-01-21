@@ -13,32 +13,34 @@ import FeatureSlider from "../Components/FeatureSlider.jsx";
 import Industry from "../Components/Industry.jsx";
 import AppStructure from "../Components/AppStructure.jsx";
 import LoginPage from "../Components/LoginPage.jsx";
+import MainLayout from "../Layouts/MainLayout.jsx";
 
 function App() {
   return (
     <BrowserRouter>
-      <NavBar />
-
       <Routes>
         {/* HOME PAGE */}
-        <Route
-          path="/"
-          element={
-            <>
-              <MainPage />
-              <LogoSlider />
-              <Awarded />
-              <FeatureSlider />
-              <Products />
-              <Industry />
-              <AppStructure />
-            </>
-          }
-        />
+        <Route element={<MainLayout />}>
+          <Route
+            path="/"
+            element={
+              <>
+                <MainPage />
+                <LogoSlider />
+                <Awarded />
+                <FeatureSlider />
+                <Products />
+                <Industry />
+                <AppStructure />
+              </>
+            }
+          />
+          {/* CREATE ACCOUNT PAGE */}
+          <Route path="/create-account" element={<CreateAccount />} />
+        </Route>
 
-        {/* CREATE ACCOUNT PAGE */}
-        <Route path="/create-account" element={<CreateAccount />} />
-        <Route path="/login-page" element={<LoginPage/>} />
+        {/* LOGIN PAGE */}
+        <Route path="/login-page" element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
   );
