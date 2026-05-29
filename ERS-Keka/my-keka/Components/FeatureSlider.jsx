@@ -13,8 +13,8 @@ export default function FeatureSlider() {
         <p className="w-[54rem] text-center mb-8 text-[#69727A] text-[19px]">The world has changed, and it's going to keep changing. Keka HR helps your teams to adapt, 
           evolve, and scale by working more effectively. Spend less time on mundane tasks and focus more on 
           strategy.Turn data into smarter decisions and create experiences your employees will love.</p>
-      </div>
-
+      </div> 
+ 
       <div className="flex ">
       {/* LEFT SIDE */}
       <div className="flex flex-col gap-2 w-1/3">

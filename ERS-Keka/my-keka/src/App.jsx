@@ -14,10 +14,12 @@ import Industry from "../Components/Industry.jsx";
 import AppStructure from "../Components/AppStructure.jsx";
 import LoginPage from "../Components/LoginPage.jsx";
 import MainLayout from "../Layouts/MainLayout.jsx";
+import SignUp from "../Components/SignUp.jsx";
 
 function App() {
   return (
-    <BrowserRouter>
+      
+      <BrowserRouter>
       <Routes>
         {/* HOME PAGE */}
         <Route element={<MainLayout />}>
@@ -41,6 +43,9 @@ function App() {
 
         {/* LOGIN PAGE */}
         <Route path="/login-page" element={<LoginPage />} />
+
+        {/* Sign Up Page */}
+        <Route path="/signup-page" element={<SignUp />} />
       </Routes>
     </BrowserRouter>
   );

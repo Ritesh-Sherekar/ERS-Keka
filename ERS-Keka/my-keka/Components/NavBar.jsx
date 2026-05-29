@@ -54,19 +54,31 @@ export default function NavBar() {
         </div>
 
         {/* Buttons */}
-        <div className="flex gap-4">
-          <button
-            onClick={() => navigate("/login-page")}
-            className="px-4 py-2 rounded text-gray-700 border-0 hover:text-gray-600 cursor-pointer"
-          >
-            Login
-          </button>
-          <button
+        <div className="flex gap-8">
+          <div>
+            <button
+              onClick={() => navigate("/login-page")}
+              className=" py-2 rounded text-gray-700 border-0 hover:text-gray-600 cursor-pointer"
+            >
+              Login/
+            </button>
+
+            <button
+              onClick={() => navigate("/signup-page")}
+              className=" py-2 rounded text-gray-700 border-0 hover:text-gray-600 cursor-pointer"
+            >
+              Signup
+            </button>
+          </div>
+
+          <div>
+            <button
             onClick={() => navigate("/create-account")}
             className="bg-blue-500 text-white px-4 py-2 rounded-4xl hover:bg-blue-600"
           >
             Get Free Trial
           </button>
+          </div>
         </div>
       </div>
     </nav>

@@ -12,7 +12,7 @@ function Industry() {
         </p>
       </div>
 
-      <div className="flex justify-evenly">
+      <div className="flex justify-evenly"> 
         {industry.map((item, index) => (
           <IndustryCard key={index} {...item} />
         ))}
