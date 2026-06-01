@@ -39,13 +39,14 @@ function App() {
           />
           {/* CREATE ACCOUNT PAGE */}
           <Route path="/create-account" element={<CreateAccount />} />
+
+          {/* Sign Up Page */}
+        <Route path="/signup-page" element={<SignUp />} />
         </Route>
 
         {/* LOGIN PAGE */}
         <Route path="/login-page" element={<LoginPage />} />
 
-        {/* Sign Up Page */}
-        <Route path="/signup-page" element={<SignUp />} />
       </Routes>
     </BrowserRouter>
   );

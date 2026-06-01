@@ -1,63 +1,64 @@
 import { useState } from "react";
 
 export default function CreateAccount() {
-  const [formData, setFormData] =  useState({
+  const [formData, setFormData] = useState({
     FirstName: "",
     LastName: "",
     WorkEmail: "",
     PhoneNumber: "",
     CompanyName: "",
-    NoOfEmployee: ""
+    NoOfEmployee: "",
   });
 
   function handleInputChange(event) {
     const { name, value } = event.target;
-    setFormData(prevData => ({
-      ...prevData,[name]: value
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
     }));
   }
 
   function handleSubmit(event) {
-  event.preventDefault();
+    event.preventDefault();
 
-  fetch("http://localhost:5678/keka/addKekaCust", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      firstName: formData.FirstName,
-      lastName: formData.LastName,
-      workEmail: formData.WorkEmail,
-      phoneNumber: formData.PhoneNumber,
-      companyName: formData.CompanyName,
-      noOfEmployee: formData.NoOfEmployee
+    fetch("http://localhost:5678/keka/addKekaCustv", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        firstName: formData.FirstName,
+        lastName: formData.LastName,
+        workEmail: formData.WorkEmail,
+        phoneNumber: formData.PhoneNumber,
+        companyName: formData.CompanyName,
+        noOfEmployee: formData.NoOfEmployee,
+      }),
     })
-  })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Failed to save data");
-      }
-      return response.json();
-    })
-    .then(data => {
-      alert("Account created successfully!");
-      console.log("Saved in DB:", data);
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to save data");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        alert("Account created successfully!");
+        console.log("Saved in DB:", data);
 
-      setFormData({
-        FirstName: "",
-        LastName: "",
-        WorkEmail: "",
-        PhoneNumber: "",
-        CompanyName: "",
-        NoOfEmployee: ""
+        setFormData({
+          FirstName: "",
+          LastName: "",
+          WorkEmail: "",
+          PhoneNumber: "",
+          CompanyName: "",
+          NoOfEmployee: "",
+        });
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("Something went wrong!");
       });
-    })
-    .catch(error => {
-      console.error("Error:", error);
-      alert("Something went wrong!");
-    });
-}
+  }
 
   return (
     <section className="bg-gray-100">
